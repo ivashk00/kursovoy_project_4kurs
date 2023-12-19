@@ -1,0 +1,499 @@
+{
+	"info": {
+		"_postman_id": "f8586b18-5c7c-4d9a-a38a-9006694d1e63",
+		"name": "Kursovou_project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25840719"
+	},
+	"item": [
+		{
+			"name": "registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"first_name\": \"Иван\",\r\n\"last_name\": 11,\r\n\"otchestvo\": \"Алексеевич\",\r\n\"login\": \"ivan\",\r\n\"email\": \"inav04@gmail.com\",\r\n\"phone\": \"+74256456\",\r\n\"password\": \"9804\",\r\n\"check_email\": \"1\",\r\n\"token\": \"0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://k-morozov.сделай.site/api/registration",
+					"protocol": "https",
+					"host": [
+						"k-morozov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\":\"+79995256787\",\r\n    \"password\":\"4321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://k-morozov.сделай.site/api/login",
+					"protocol": "https",
+					"host": [
+						"k-morozov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_tovar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Видеокарта RTX5090",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "bjXGFImcB/Лр8.docx"
+						},
+						{
+							"key": "about",
+							"value": "Мощная видеокарта по привлекательной цене",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "prise",
+							"value": "120009",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://k-morozov.сделай.site/api/add_tovar",
+					"protocol": "https",
+					"host": [
+						"k-morozov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"add_tovar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_itworld",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Видеокарта",
+							"type": "text"
+						},
+						{
+							"key": "about",
+							"value": "new",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "Y2-ejz9xE/Диаграмма без названия.drawio"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://k-morozov.сделай.site/api/add_itworld",
+					"protocol": "https",
+					"host": [
+						"k-morozov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"add_itworld"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"1\",\r\n    \"tovar_id\":\"2\",\r\n    \"status_id\":\"hello\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://k-morozov.сделай.site/api/add_order",
+					"protocol": "https",
+					"host": [
+						"k-morozov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"add_order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_basket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_tovar\": 2,\r\n    \"amount\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://k-morozov.сделай.site/api/add_basket",
+					"protocol": "https",
+					"host": [
+						"k-morozov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"add_basket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "basket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://k-morozov.сделай.site/api/basket",
+					"protocol": "https",
+					"host": [
+						"k-morozov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"basket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tovars",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://k-morozov.сделай.site/api/tovars",
+					"protocol": "https",
+					"host": [
+						"k-morozov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"tovars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://k-morozov.сделай.site/api/orders",
+					"protocol": "https",
+					"host": [
+						"k-morozov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "itworld",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://k-morozov.сделай.site/api/itworld",
+					"protocol": "https",
+					"host": [
+						"k-morozov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"itworld"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del_order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://k-morozov.сделай.site/api/del_order",
+					"protocol": "https",
+					"host": [
+						"k-morozov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"del_order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del_tovar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://k-morozov.сделай.site/api/del_tovar",
+					"protocol": "https",
+					"host": [
+						"k-morozov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"del_tovar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del_itworld",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://k-morozov.сделай.site/api/del_itworld",
+					"protocol": "https",
+					"host": [
+						"k-morozov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"del_itworld"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del_basket",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://k-morozov.сделай.site/api/del_basket",
+					"protocol": "https",
+					"host": [
+						"k-morozov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"del_basket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editor_status",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "status_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://k-morozov.сделай.site/api/editor_status",
+					"protocol": "https",
+					"host": [
+						"k-morozov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"editor_status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editor_tovar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "prise",
+							"value": "11000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://k-morozov.сделай.site/api/editor_tovar",
+					"protocol": "https",
+					"host": [
+						"k-morozov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"editor_tovar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
